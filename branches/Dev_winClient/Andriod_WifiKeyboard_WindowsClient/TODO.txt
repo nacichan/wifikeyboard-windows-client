@@ -1,0 +1,62 @@
+﻿Wifi KeyBoard, Windows Client
+--------------------------------------------------------------------------------------------------------------------------
+
+Introduction:
+-------------
+	In this Project we will create a windows client for Wi-Fi Keyboard for Android http://code.google.com/p/wifikeyboard/
+	this application will run in background and toggle keyboard to work with Android on a toggle shortcut key press. after
+	activating this application will redirect all keyboard input to the Android.
+
+Core Functionalities:
+---------------------
+	Adro_win_wifi_keyboard will have the following function:
+		
+	1.	Redirect all Keyboard Input to android after the Toggle KeyPress.
+	2.	Global Android shortcut Keys which will work always. e.g. volume up. volume down. ... e.g.
+	3.	Configurable Android Special Keys to map with KeyBoard keys. e.g. Menu to f2, alt to alt, DPAD Center to f1 .. etc.
+	4.	Notification of Connection / Disconnection with Android device. 
+
+
+How Dose application will work:
+-------------------------------
+	application will be work as follows..
+
+	>> StartUp
+	>> Loads up configuration 
+	>> Setup HotKeys ... (for 2.)
+	>> wait for the HotKeys.
+	>> in case of KeyBord Toggle Hotkey,  Listen to the Keystroke and transmit keystrokes to the Android.
+	   cancel keystrokes so it will not affect to the running application on the windows.
+	>> Show the Notifications ....
+
+Code Structure:
+---------------
+	Andro_wifi_keyboard_win_client source code will be organized in the following sturcture..
+
+	Root nameSpace
+	--------------
+		root namespace for Code will be 
+			Cyborier.Applications.Andriod.WifiKeyboard.WinClient
+	
+	Projects:
+	---------
+		Andriod_WifiKeyboard_WindowsClient
+		----------------------------------
+			this project will be Windows forms application  to provide UI and and main application.
+		
+		Andriod_WifiKeyboard_library
+		----------------------------
+			This Project will contain the Library which will be used in the GUI application it will have the followng sub namespaces:
+			
+			Configuration
+			-------------
+				Will contains the Configuration classes for the Andriod_Wifi_keyboard_Library.
+
+			Diagnostics
+			-----------
+				this will contains the diagnostics classes.
+
+			Win32Api
+			--------
+				this namespace will contains classes related to Win32 Api stuffs
+
