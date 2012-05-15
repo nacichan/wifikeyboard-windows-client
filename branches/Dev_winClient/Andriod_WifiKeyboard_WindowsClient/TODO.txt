@@ -43,6 +43,13 @@ Code Structure:
 		Andriod_WifiKeyboard_WindowsClient
 		----------------------------------
 			this project will be Windows forms application  to provide UI and and main application.
+			it will contains the following classes
+
+			Controller
+				this class will control the whole application
+			
+			MainForm
+				this will be the Main GUI for the application.
 		
 		Andriod_WifiKeyboard_library
 		----------------------------
